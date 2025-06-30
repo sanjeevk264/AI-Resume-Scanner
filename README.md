@@ -1,16 +1,18 @@
 # AI Resume Scanner
 
-A modern, AI-powered resume screening tool built with Python and BERT. This project compares resumes to job descriptions using semantic similarity (Sentence-BERT) and identifies missing keywords — enabling smarter resume tailoring and job targeting.
+An intelligent, AI-driven resume screening tool built with Python and BERT. This project evaluates the fit between resumes and job descriptions by leveraging semantic similarity with Sentence-BERT, helping job seekers tailor their resumes more effectively by identifying missing keywords and skill gaps.
 
-## 🔍 Key Features
+🔍 Core Features
+✅ Extracts text from multiple resume formats including PDF, DOCX, and TXT
 
-- ✅ Extracts text from resumes (PDF, DOCX, TXT)
-- ✅ Parses job descriptions (TXT)
-- ✅ Calculates a semantic match score using **Sentence-BERT**
-- ✅ Identifies missing keywords from the resume
-- 🧠 Built for extensibility (Streamlit UI, AWS hosting, advanced NLP)
+✅ Parses job descriptions to analyze key requirements
 
-## 📁 Project Structure
+✅ Computes semantic similarity scores using Sentence-BERT embeddings
+
+✅ Highlights important keywords absent from the resume
+
+🧠 Designed for easy extension with a potential Streamlit UI and cloud deployment
+## 📂 Project Layout
 
 ```
 AI-Resume-Scanner/
@@ -21,53 +23,55 @@ AI-Resume-Scanner/
 ├── data/
 │   ├── resumes/
 │   └── job_descriptions/
-├── main.py                  # BERT-based semantic comparison
+├── main.py                  # Core semantic similarity logic
 ├── requirements.txt
 └── README.md
+
 ```
 
 ## ⚙️ How to Use
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/Becky0x01/AI-Resume-Scanner.git
+git clone https://github.com/SanjeevKadam/AI-Resume-Scanner.git
 cd AI-Resume-Scanner
+
 ```
 
 2. Install dependencies:
 ```bash
 pip install -r requirements.txt
+
 ```
 
 3. Add your resume and job description (in `data/`)
 
-4. Run the script:
+4. Run the main script to get match scores and keyword insights:
 ```bash
 python3 main.py
 ```
 
-## 🧠 Semantic AI Matching
-
-This project uses [`sentence-transformers`](https://www.sbert.net/) to generate vector embeddings for resume and job description content, then compares them with cosine similarity.
-
+🤖 AI-Powered Semantic Matching
+This tool leverages the sentence-transformers library to transform resumes and job descriptions into vector embeddings, enabling a nuanced similarity comparison beyond keyword matching.
 ### Example Output:
 ```
-🤖 Semantic Match Score: 85.17%
-🧩 Missing Keywords from Resume:
-aws, scalable, cloud, communication, nlp, deployment
+Semantic Match Score: 88.42%
+Keywords Missing from Resume:
+cloud, deployment, scalability, teamwork, communication
+
 ```
 
-## 🚀 Future Extensions
+🚀 Planned Improvements
+Interactive Streamlit-based UI for resume and job upload
 
-- Add Streamlit UI for interactive uploading
-- Deploy to AWS (EC2 or Streamlit Cloud)
-- Semantic keyword feedback
-- Resume version recommendations
+Cloud deployment on AWS or Streamlit Cloud for easy access
 
-## 👩‍💻 Built By
+Enhanced keyword feedback and resume tailoring recommendations
 
-Becky Zhu  
-Aspiring AI/Cloud Engineer | Lifelong Learner  
-[LinkedIn](https://www.linkedin.com/in/rebeccaiit) | [GitHub](https://github.com/Becky0x01)
+Integration with Google Cloud AI services
+
+👨‍💻 About the Developer
+Sanjeev Kadam
+AI enthusiast passionate about leveraging NLP and machine learning to improve job search experiences.
 
 ---
